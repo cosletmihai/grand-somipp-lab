@@ -22,6 +22,7 @@ The purpose of this laboratory is for you to write a somewhat realistic simulati
 ### Disclamer!
 
 For ease of use and how clear is the `json` format, I used it to explain the design of each of the `data structures` you will need in your system.
+
 ----
 
 To start, here is the *menu* from which a waiter can generate an order:
