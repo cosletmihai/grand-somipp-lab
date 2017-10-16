@@ -28,33 +28,33 @@ To start, here is the *menu* from which a waiter can generate an order:
 - pizza, `id=1`
 ```json
 {
- 'preparation-time': 20,
- 'complexity': 2,
- 'cooking-apparatus': 'oven'
+ "preparation-time": 20,
+ "complexity": 2,
+ "cooking-apparatus": "oven"
 }
 ```
 - salad, `id=2`
 ```json
 {
- 'preparation-time': 10,
- 'complexity': 1,
- 'cooking-apparatus': null
+ "preparation-time": 10,
+ "complexity": 1,
+ "cooking-apparatus": null
 }
 ```
 - zeama, `id=3`
 ```json
 {
- 'preparation-time': 7,
- 'complexity': 1,
- 'cooking-apparatus': 'stove'
+ "preparation-time": 7,
+ "complexity": 1,
+ "cooking-apparatus": "stove"
 }
 ```
 - Scallop Sashimi with Meyer Lemon Confit, `id=4`
 ```json
 {
- 'preparation-time': 32,
- 'complexity': 3,
- 'cooking-apparatus': null
+ "preparation-time": 32,
+ "complexity": 3,
+ "cooking-apparatus": null
 }
 ```
 
@@ -67,10 +67,10 @@ An *order* should contain the following information:
 An example of an order could look like this:
 ```json
 {
- 'items': 1,
- 'priority': 2,
- 'max-wait`: 40,
- 'reputation`: 0.5
+ "items": 1,
+ "priority": 2,
+ "max-wait": 40,
+ "reputation": 0.5
 }
 ```
 
@@ -78,10 +78,10 @@ or
 
 ```json
 {
- 'items': [3, 1, 2, 2],
- 'priority': 3,
- 'max-wait`: 35,
- 'reputation`: 2.1
+ "items": [3, 1, 2, 2],
+ "priority": 3,
+ "max-wait": 35,
+ "reputation": 2.1
 }
 ```
 
