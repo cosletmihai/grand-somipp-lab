@@ -60,9 +60,9 @@ To start, here is the *menu* from which a waiter can generate an order:
 ```
 
 An *order* should contain the following information:
-- one or more [[1]]() menu items
+- one or more [[1]](#more-menu-items) menu items
 - the priority of the order (where it ranges from `1` to `5`, `1` being the smallest priority, and `5` -  with the highest one)
-- maximum wait time that a client is willing to wait for its order [[2]]() and it should be calculated by taking the item with the highest `preparation-time` from the order and multiply it by `1.3` [we should analyze what the most realistic coefficient should be]. The timer of an order starts from the moment it's created.
+- maximum wait time that a client is willing to wait for its order [[2]](#max-waiting-time) and it should be calculated by taking the item with the highest `preparation-time` from the order and multiply it by `1.3` [we should analyze what the most realistic coefficient should be]. The timer of an order starts from the moment it's created.
 
 An example of an order could look like this:
 ```json
@@ -92,11 +92,11 @@ Talking about **cooks**: their job is to take the order and "prepare" the menu i
 You will have to define the mechanism that will decide which cook takes which order.
 
 Each **cook** has the following characteristics:
-- `rank` [[3]](), which defines the complexity of the food that they can prepare (one caveat is that a cook can only take orders which his current rank or one rank lower that his current one):
+- `rank` [[3]](#rank-and-proficiency), which defines the complexity of the food that they can prepare (one caveat is that a cook can only take orders which his current rank or one rank lower that his current one):
   - Line Cook (`rank = 1`)
   - Saucier (`rank = 2`) 
   - Executive Chef (Chef de Cuisine) (`rank = 3`)
-- `proficiency` [[3]](): it indicates on how may dishes he can work at once. It varies between `1` and `4` (and to follow a bit of logic, the higher the rank of a cook the higher is the probability that he can work on more dishes at the same time).
+- `proficiency` [[3]](#rank-and-proficiency): it indicates on how may dishes he can work at once. It varies between `1` and `4` (and to follow a bit of logic, the higher the rank of a cook the higher is the probability that he can work on more dishes at the same time).
 
 So a **cook** could be have the following definition:
 ```json
@@ -109,7 +109,7 @@ So a **cook** could be have the following definition:
 ```
 Get creative on where and when to use this precious information about the cooks.
 
-Another requirement not for the *faint of heart* is to implement the **cooking apparatus** rule [[4]](). It comprises of the fact that a kitchen has limited space, thus a finite number of ovens, stoves and the likes.
+Another requirement not for the *faint of heart* is to implement the **cooking apparatus** rule [[4]](#cooking-apparatus). It comprises of the fact that a kitchen has limited space, thus a finite number of ovens, stoves and the likes.
 As you've noticed some *menu items* require one of these appliance and it's up to you to define what happens when a cook runs into the problem of no available machinery. I give you the green light to experiment and find what abstract data type will best fit to solve the problem.
 
 Some mention should be given to the **reputation system** [[5]](#realistic-coefficients). It should, theoretically, indicate the success of your implementation.
@@ -125,8 +125,20 @@ It is based on the `0` to `5` :star: system, `0` being the worst rating, and `5`
 | `> max-wait*1.4` | 0      |
 
 
+----
+## Notes
 
-# Realistic coefficients
+### More menu items
+
+### Max waiting time
+
+### Rank and proficiency
+
+### Cooking Apparatus
+
+### Reputation system
 [As well, we should identify the "realistic" coefficients.]
+
+----
 
 
