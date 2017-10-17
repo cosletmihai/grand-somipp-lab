@@ -11,6 +11,8 @@ The laboratory will touch upon two of the classic multi-process synchronization 
 - the [producer-consumer problem](https://en.wikipedia.org/wiki/Producer–consumer_problem)
 - the [readers-writers problem](https://en.wikipedia.org/wiki/Readers–writers_problem)
 
+You will use the `pthread` (which stands for POSIX threads) library to write this system. More information about this [here](#really-useful-bibliography).
+
 The first "task" of this laboratory is to figure out how each of these problems will fit into *our* own.
 
 ## Let's get to the meat of the problem
@@ -127,7 +129,20 @@ It is based on the `0` to `5` :star: system, `0` being the worst rating, and `5`
 | `> max-wait*1.4` | 0      |
 
 
+----
 
+## What should the report contain
+1. Clear explanation on your architectural decisions; this should include: 
+  - reasoning behind each major decision;
+  - `code` snippets;
+  - useful links that back up your decision.
+2. Answer to the following questions: <br/>
+(questions pending, will be updated soon)
+
+## Things to beware:
+- deadlocks
+- inefficient use of the cooks' time
+- deadlocks
 
 ----
 ## Notes
@@ -137,7 +152,6 @@ This is not a difficult upgrade of the order system, but it allows for a more in
 
 ### Max waiting time
 
-
 ### Rank and proficiency
 
 ### Cooking Apparatus
@@ -145,10 +159,18 @@ This is not a difficult upgrade of the order system, but it allows for a more in
 ### Reputation system
 We should analyze what the most realistic coefficient should be for defining a realistic maximum waiting time generation, and, as well, we should identify the "realistic" coefficients for setting out :star:s.
 
-
 ### Time 
 I hope you noticed that I haven't indicated the time units, and the numbers given are a "general" unit of measurement. In your system you should have the ability to balblabal
 
 ----
 
 
+## Useful Bibliography 
+- [Modern Operating Systems](https://www.amazon.com/Modern-Operating-Systems-Andrew-Tanenbaum/dp/013359162X) *by Andrew S. Tanenbaum*, chapter 2.
+
+## Really Useful Bibliography
+Depending on your reading style preferences I would suggest you try one of the following links:
+
+- https://github.com/angrave/SystemProgramming/wiki
+- https://computing.llnl.gov/tutorials/pthreads/
+- http://www.sonaliagarwal.com/osslides/r6b.pdf
