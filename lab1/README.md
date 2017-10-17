@@ -62,7 +62,7 @@ To start, here is the *menu* from which a waiter can generate an order:
 An *order* should contain the following information:
 - one or more [[1]](#more-menu-items) menu items
 - the priority of the order (where it ranges from `1` to `5`, `1` being the smallest priority, and `5` -  with the highest one)
-- maximum wait time that a client is willing to wait for its order [[2]](#max-waiting-time) and it should be calculated by taking the item with the highest `preparation-time` from the order and multiply it by `1.3` [we should analyze what the most realistic coefficient should be]. The timer of an order starts from the moment it's created.
+- maximum wait time that a client is willing to wait for its order [[2]](#max-waiting-time) and it should be calculated by taking the item with the highest `preparation-time` from the order and multiply it by `1.3` [[5]](#realistic-coefficients). The timer of an order **starts** from the moment it's created.
 
 An example of an order could look like this:
 ```json
@@ -85,8 +85,10 @@ or
 
 where the `items` indicate the `id`s of the menu items.
 
-The purpose of **waiters** is to generate **orders**; how this happens (either by some random mechanism at random time intervals, either by reading it from a file, or by requiring input from a user) it up to you, this is not the important part. <br/>
-The important part is how you will solve the problem of them writing to the **order `list`** and allowing the **cooks** to "take" orders from it as quickly as possible with as little wait time and overhead as possible.
+The purpose of **waiters** is to "find" **orders**. A restaurant has a finite amount of tables that "clients" can occupy. For simplicity's sake, at any given time a **table** can have only one **order**, thus if a restaurant has `10` tables, it can at most have `10` orders (either in the `order list` or in the cooks hands). <br/>
+In order for an order (pun intended) to end up in the `order list` it has to be picked up by a **waiter**. The time it takes for a waiter varies, and I would say that a time between `2` and `4` should be realistic enough.
+
+One of the important parts is how you will solve the problem of them [**waiters**] writing to the **order `list`** and allowing the **cooks** to "take" orders from it as quickly as possible with as little wait time and overhead as possible.
 
 Talking about **cooks**: their job is to take the order and "prepare" the menu item(s) from it, and return the orders as soon and with as little idle time as possible. <br/>
 You will have to define the mechanism that will decide which cook takes which order.
@@ -125,19 +127,27 @@ It is based on the `0` to `5` :star: system, `0` being the worst rating, and `5`
 | `> max-wait*1.4` | 0      |
 
 
+
+
 ----
 ## Notes
 
 ### More menu items
+This is not a difficult upgrade of the order system, but it allows for a more interesting problem
 
 ### Max waiting time
+
 
 ### Rank and proficiency
 
 ### Cooking Apparatus
 
 ### Reputation system
-[As well, we should identify the "realistic" coefficients.]
+We should analyze what the most realistic coefficient should be for defining a realistic maximum waiting time generation, and, as well, we should identify the "realistic" coefficients for setting out :star:s.
+
+
+### Time 
+I hope you noticed that I haven't indicated the time units, and the numbers given are a "general" unit of measurement. In your system you should have the ability to balblabal
 
 ----
 
