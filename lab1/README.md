@@ -77,9 +77,9 @@ or
 
 ```json
 {
- "items": [3, 1, 2, 2],
+ "items": [3, 4, 4, 2],
  "priority": 3,
- "max-wait": 35
+ "max-wait": 45
 }
 ```
 
@@ -112,7 +112,7 @@ Get creative on where and when to use this precious information about the cooks.
 Another requirement not for the *faint of heart* is to implement the **cooking apparatus** rule [[4]](). It comprises of the fact that a kitchen has limited space, thus a finite number of ovens, stoves and the likes.
 As you've noticed some *menu items* require one of these appliance and it's up to you to define what happens when a cook runs into the problem of no available machinery. I give you the green light to experiment and find what abstract data type will best fit to solve the problem.
 
-Some mention should be given to the **reputation system**. It should, theoretically, indicate the success of your implementation.
+Some mention should be given to the **reputation system** [[5]](#realistic-coefficients). It should, theoretically, indicate the success of your implementation.
 It is based on the `0` to `5` :star: system, `0` being the worst rating, and `5` - the highest. How you get the assigned the stars, you might ask? Well, since we can't really give it a taste test, what will define the number of stars given to each order would be the time-frame it took to complete.
 
 | Time frame       | :star: |
@@ -123,3 +123,10 @@ It is based on the `0` to `5` :star: system, `0` being the worst rating, and `5`
 | `max-wait*1.3`   | 2      |
 | `max-wait*1.4`   | 1      |
 | `> max-wait*1.4` | 0      |
+
+
+
+# Realistic coefficients
+[As well, we should identify the "realistic" coefficients.]
+
+
