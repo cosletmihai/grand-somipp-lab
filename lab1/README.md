@@ -2,7 +2,7 @@
 ## Let's open a restaurant!
 
 ### Keywords
-`OS`, `pthread`, `producer-consumer`, `readers-writers`, `thread`, `lock`
+`OS`, `pthread`, `producer-consumer`, `readers-writers`, `thread`, `lock`, `semaphore`, 
 
 ### Objective
 Getting a solid grasp on all of the theory revolving around **threads**, **locks**, and **multiprogramming** in general, as these are some of the most fundamental concepts that the `operating system` designer should understand.
@@ -27,7 +27,7 @@ For ease of use and how clear is the `json` format, I used it to explain the des
 
 ----
 
-To start, here is the *menu* from which a waiter can generate an order:
+To start, here is the *menu* from which a waiter can generate an order (more items to come):
 - pizza, `id=1`
 ```json
 {
@@ -58,6 +58,38 @@ To start, here is the *menu* from which a waiter can generate an order:
  "preparation-time": 32,
  "complexity": 3,
  "cooking-apparatus": null
+}
+```
+- Island Duck with Mulberry Mustard, `id=5`
+```json
+{
+ "preparation-time": 35,
+ "complexity": 3,
+ "cooking-apparatus": "oven"
+}
+```
+- Waffles, `id=6`
+```json
+{
+ "preparation-time": 10,
+ "complexity": 1,
+ "cooking-apparatus": "stove"
+}
+```
+- Aubergine, `id=7`
+```json
+{
+ "preparation-time": 20,
+ "complexity": 2,
+ "cooking-apparatus": null
+}
+```
+- Lasagna, `id=8`
+```json
+{
+ "preparation-time": 30,
+ "complexity": 2,
+ "cooking-apparatus": "oven"
 }
 ```
 
