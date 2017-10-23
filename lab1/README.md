@@ -96,14 +96,14 @@ To start, here is the *menu* from which a waiter can generate an order (more ite
 An *order* should contain the following information:
 - one or more [[1]](#more-menu-items) menu items
 - the priority of the order (where it ranges from `1` to `5`, `1` being the smallest priority, and `5` -  with the highest one)
-- maximum wait time that a client is willing to wait for its order [[2]](#max-waiting-time) and it should be calculated by taking the item with the highest `preparation-time` from the order and multiply it by `1.3` [[5]](#realistic-coefficients). The timer of an order **starts** from the moment it's created.
+- maximum wait time that a client is willing to wait for its order [[2]](#max_waiting-time) and it should be calculated by taking the item with the highest `preparation-time` from the order and multiply it by `1.3` [[5]](#realistic-coefficients). The timer of an order **starts** from the moment it's created.
 
 An example of an order could look like this:
 ```json
 {
  "items": 1,
  "priority": 2,
- "max-wait": 26
+ "max_wait": 26
 }
 ```
 
@@ -113,7 +113,7 @@ or
 {
  "items": [3, 4, 4, 2],
  "priority": 3,
- "max-wait": 45
+ "max_wait": 45
 }
 ```
 
@@ -153,12 +153,12 @@ It is based on the `0` to `5` :star: system, `0` being the worst rating, and `5`
 
 | Time frame       | :star: |
 |------------------|--------|
-| `< max-wait`     | 5      |
-| `max-wait*1.1`   | 4      |
-| `max-wait*1.2`   | 3      |
-| `max-wait*1.3`   | 2      |
-| `max-wait*1.4`   | 1      |
-| `> max-wait*1.4` | 0      |
+| `< max_wait`     | 5      |
+| `max_wait*1.1`   | 4      |
+| `max_wait*1.2`   | 3      |
+| `max_wait*1.3`   | 2      |
+| `max_wait*1.4`   | 1      |
+| `> max_wait*1.4` | 0      |
 
 
 ----
