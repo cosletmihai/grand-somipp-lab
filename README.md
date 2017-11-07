@@ -26,7 +26,8 @@ The purpose of this laboratory is for you to write a somewhat realistic simulati
 For ease of use and how clear is the `json` format, I used it to explain the design of each of the `data structures` you will need in your system.
 
 ----
-
+### Orders
+#### Food
 To start, here is the *menu* from which a waiter can generate an order (more items to come):
 - pizza, `id=1`
 ```json
@@ -93,6 +94,7 @@ To start, here is the *menu* from which a waiter can generate an order (more ite
 }
 ```
 
+#### Order
 An *order* should contain the following information:
 - one or more menu items
 - the priority of the order (where it ranges from `1` to `5`, `1` being the smallest priority, and `5` -  with the highest one)
@@ -123,6 +125,8 @@ The purpose of **waiters** is to "find" **orders**. A restaurant has a finite am
 In order for an order (pun intended) to end up in the `order list` it has to be picked up by a **waiter**. The time it takes for a waiter varies, and I would say that a time between `2` and `4` should be realistic enough.
 
 One of the important parts is how you will solve the problem of them [**waiters**] writing to the **order `list`** and allowing the **cooks** to "take" orders from it as quickly as possible with as little wait time and overhead as possible.
+
+### Cooks
 
 Talking about **cooks**: their job is to take the order and "prepare" the menu item(s) from it, and return the orders as soon and with as little idle time as possible. <br/>
 You will have to define the mechanism that will decide which cook takes which order.
@@ -184,6 +188,8 @@ It is based on the `0` to `5` :star: system, `0` being the worst rating, and `5`
 - (apparently things that start with **dead**)
 
 ----
+## Notes
+
 ### Realistic coefficients
 We should analyze what the most realistic coefficient should be for defining a realistic maximum waiting time generation, and, as well, we should identify the "realistic" coefficients for setting out :star:s.
 
