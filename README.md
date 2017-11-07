@@ -173,7 +173,7 @@ It is based on the `0` to `5` :star: system, `0` being the worst rating, and `5`
 2. Answer to the following questions: 
   - How does the `Producer-Consumer` problem fit in this laboratory? What where the difficulties you encountered when implementing it?
   - How does the `Readers-Writers` problem fit in this laboratory? What where the difficulties you encountered when implementing it?
-3. *(for improvement purposes)* What didn't you enjoy while working on this lab and what do you think that could be changed for a more pleasant experience?
+3. *(for improvement purposes)* What did and didn't you enjoy while working on this lab and what do you think that could be changed for a more pleasant experience?
 
 
 ## Things to beware:
@@ -195,8 +195,7 @@ I hope you noticed that I haven't indicated the time units, the numbers given ar
 ```c++
 #define TIME_UNIT 250
 
-
-wait_for_order(random(2, 4) * TIME_UNIT);
+take_for_order(random(2, 4) * TIME_UNIT);
 ```
 This is so you could experiment and check whether your system will behave differently depending on the time frames you chose. 
 
@@ -222,8 +221,8 @@ Here you expand upon the concept of the producer consumer problem in a way that 
 
 
 ## Deadline
-5th of December (both groups). <br>
-Each week of delay will lead to a deduction point from the mark.
+### 5th of December (both groups). <br>
+> Each week of delay will lead to a deduction point from the mark.
 
 
 ## Useful Bibliography 
