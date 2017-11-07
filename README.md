@@ -4,22 +4,22 @@
  <summary>Table of Contents</summary>
 
 - [Let's open a restaurant!](#lets-open-a-restaurant)
- - [Keywords](#keywords)
- - [Objective](#objective)
+  - [Keywords](#keywords)
+  - [Objective](#objective)
 - [Let's get to the meat of the problem](#lets-get-to-the-meat-of-the-problem)
- - [Orders](#orders)
-  - [Food](#food)
-  - [Order](#order)
- - [Cooks](#cooks)
+  - [Orders](#orders)
+    - [Food](#food)
+    - [Order](#order)
+  - [Cooks](#cooks)
 - [What should the report contain](#what-should-the-report-contain)
 - [Things to beware:](#things-to-beware)
 - [Notes](#notes)
- - [Realistic coefficients](#realistic-coefficients)
- - [Time](#time)
+  - [Realistic coefficients](#realistic-coefficients)
+  - [Time](#time)
 - [Suggested Order of Working on This Laboratory](#suggested-order-of-working-on-this-laboratory)
-- [Deadline](#deadline)
-- [Useful Bibliography](#useful-bibliography)
-- [Really Useful Bibliography](#really-useful-bibliography)
+ - [Deadline](#deadline)
+ - [Useful Bibliography](#useful-bibliography)
+ - [Really Useful Bibliography](#really-useful-bibliography)
 
 </details>
 
