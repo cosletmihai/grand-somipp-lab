@@ -217,7 +217,7 @@ It is based on the `0` to `5` :star: system, `0` being the worst rating, and `5`
 ### Realistic coefficients
 We should analyze what the most realistic coefficient should be for defining a realistic maximum waiting time generation, and, as well, we should identify the "realistic" coefficients for setting out :star:s.
 
-Feel free to experiment with this indicators as to make your the system more believable.
+Feel free to experiment with this indicators as to make your system more believable.
 
 ### Time 
 I hope you noticed that I haven't indicated the time units, the numbers given are a "general" unit of measurement. In your system you should have the ability to easily modify the time units that you're using. <br/>
@@ -225,7 +225,7 @@ I hope you noticed that I haven't indicated the time units, the numbers given ar
 ```c++
 #define TIME_UNIT 250
 
-take_for_order(random(2, 4) * TIME_UNIT);
+take_order(random(2, 4) * TIME_UNIT);
 ```
 This is so you could experiment and check whether your system will behave differently depending on the time frames you chose. 
 
